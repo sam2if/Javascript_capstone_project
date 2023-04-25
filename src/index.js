@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import './style.css';
 
+<<<<<<< HEAD
 
 
 // const GetShows=async ()=>{
@@ -17,6 +18,8 @@ import './style.css';
 
 let count = 0;
 
+=======
+>>>>>>> 5aae02f4a61404345368ae66136b6d2339a1c661
 const GetShows=async ()=>{
  try {
   
@@ -25,6 +28,10 @@ const GetShows=async ()=>{
    const url = `https://api.tvmaze.com/shows/${i}`
    const res = await fetch(url);
    const shows = await res.json();
+<<<<<<< HEAD
+=======
+   console.log(res)
+>>>>>>> 5aae02f4a61404345368ae66136b6d2339a1c661
    const Movie = document.createElement('div');
    Movie.className='Movie'
    Movie.innerHTML =`
