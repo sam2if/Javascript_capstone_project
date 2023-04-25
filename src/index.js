@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import './style.css';
 
-const url = 'https://api.tvmaze.com/shows'
+
 
 // const GetShows=async ()=>{
 //  try {
@@ -17,17 +17,19 @@ const url = 'https://api.tvmaze.com/shows'
 
 const GetShows=async ()=>{
  try {
+  
   const listsMovie=document.querySelector('.listsMovie');
-  for(let i=1 ;i <=9 ;i++){
-   const res = await fetch(`"${url}/${[i]}`);
+  for(let i=1 ;i <=15 ;i++){
+   const url = `https://api.tvmaze.com/shows/${i}`
+   const res = await fetch(url);
    const shows = await res.json();
-   console.log(shows)
+   console.log(res)
    const Movie =document.createElement('div');
    Movie.className='Movie'
    Movie.innerHTML =`
-   <img src="${shows[image].medium}"
+   <img src="${shows.image.medium}"
    <div class="ItemLike">
-     <div>Movie</div>
+     <div>${shows.name}</div>
      <div class="likeDiv">
        <button> <i class='fa fa-heart-o green-color'></i></button>
        <div>
