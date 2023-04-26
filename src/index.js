@@ -29,8 +29,8 @@ const GetShows=async ()=>{
    <div class="ItemLike">
      <div>${shows.name}  ${i}</div>
      <div class="likeDiv">
-       <button class="reacttoit"> <i class='fa fa-heart-o green-color'></i></button>
-       <div class="dis">likes
+       <button class="reacttoit${i}"> <i class='fa fa-heart-o green-color'></i></button>
+       <div class="dis${i}">likes
        </div>
      </div>
      
@@ -38,23 +38,12 @@ const GetShows=async ()=>{
    <div class="DivBtncomment"><button>comments</button></div>   
    
    `
-   listsMovie.appendChild(Movie)
-  }
+   listsMovie.appendChild(Movie);
 
-  let displayLikes = async () => {
-    const res = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/32UoQxjPo3aTpkPwZxqF/likes/');
-    const data = await res.json();
-    const dis = document.querySelector('.dis');
-    dis.innerHTML =  `<h1>likes ${data[0].likes += 1}</h1>`
-  }
-
-  const likes = document.querySelectorAll('.reacttoit');
-  likes.forEach((elem) => {
-    elem.addEventListener('click', displayLikes)
-  })
-
- 
   
+
+  }
+
  }catch(error) {
   console.log("error", error);
  }
@@ -62,18 +51,41 @@ const GetShows=async ()=>{
 
 GetShows()
 
-let getLikes = async () => {
-  try {
-    const items = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/32UoQxjPo3aTpkPwZxqF/likes/', {
-      method: 'POST',
-      body: JSON.stringify({
-        item_id: 'item1'
-      }),
-      headers: {
-        'Content-Type': 'application/json'
+for (let i = 1; i <= 15; i += 1) {
+  let createLikes = async () => {
+    try {
+      for (let i = 1; i <= 15; i++) {
+        let items = `item${i}`;
+        let response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/32UoQxjPo3aTpkPwZxqF/likes/', {
+          method: 'POST',
+          body: JSON.stringify({
+            item_id: items
+          }),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
       }
-    });  
-  }catch(error) {
-    console.log('error', error);
+    } catch (error) {
+      console.log('Error creating likes:', error);
+    }
   }
+
+  let displayLikes = async () => {
+    const res = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/32UoQxjPo3aTpkPwZxqF/likes/');
+    const data = await res.json();
+    console.log(data)
+    const dis = document.querySelector(`.dis${i}`);
+    dis.innerHTML = `<p>likes ${data[i].likes} </p>`
+
+    let lik = document.querySelector(`.reacttoit${i}`);
+    lik.addEventListener('click', () => {
+      data[i].likes += 1;
+      dis.innerHTML = `<p>likes ${data[i].likes} </p>`
+    })
+  }
+
+  displayLikes()
+  
 }
+
