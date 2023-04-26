@@ -1,72 +1,165 @@
 header {
-    display: flex;
-    font-size: x-large;
-    font-family: 'poppins', sans-serif;
-    font-weight: bold;
-    column-gap: 150px;
-    justify-content: center;
-  }
-  
-  nav {
-    height: 50px;
-  }
-    
-  ul {
-    list-style-type: none;
+  display: flex;
+  font-size: x-large;
+  font-family: 'poppins', sans-serif;
+  font-weight: bold;
+  column-gap: 150px;
+  justify-content: center;
+}
+
+nav {
+  height: 50px;
+}
+
+ul {
+  list-style-type: none;
   margin: 0;
-      padding: 0;
-    }
-    
-    li {
-      float: left;
-    }
-    
-    li a {
-      display: block;
-      color: rgb(13, 10, 10);
-      text-align: center;
-      padding: 16px;
-      text-decoration: none;
-    }
-    
-    li a:hover {
-      background-color: #73b187;
-    }
-    
-  .listsMovie {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 3em;
-    width: 250px;
-    margin-top: 30px;
-    margin-left: 20px;
-    padding: 1em;
-   
-  }
-  
-  .Movie {
-      border: rgb(19, 18, 18) 3px solid;
-  }
-  
-  .NameMovie {
-      padding: 5px;
-  }
-  
-  .ItemLike {
-    display: flex;
-    column-gap: 40px;
-    justify-content: center;
-    padding: 5px;
-  }
-  
-  .likeDiv {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .DivBtncomment {
-    display: flex;
-    justify-content: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
+  padding: 0;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: rgb(13, 10, 10);
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #73b187;
+}
+
+.listsMovie {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3em;
+  width: 250px;
+  margin-top: 30px;
+  margin-left: 20px;
+  padding: 1em;
+}
+
+.Movie {
+  border: rgb(19, 18, 18) 3px solid;
+  height: 400px;
+}
+
+.NameMovie {
+  padding: 5px;
+}
+
+.ItemLike {
+  display: flex;
+  column-gap: 20px;
+  justify-content: center;
+  padding: 5px;
+}
+
+.likeDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.DivBtncomment {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.Btncomment {
+
+}
+
+.Position {
+  position: absolute;
+  display: none;
+  top: 50px;
+  justify-content: center;
+  width: 110vw;
+  background-color: rgba(92, 100, 97, 0.952);
+  left: 0;
+  right: 0;
+}
+
+.FramePopup {
+  background-color: rgb(30, 96, 138);
+  padding: 50px;
+  width: 50vw;
+  border-radius: 20px;
+  margin-bottom: 400px;
+}
+
+.popupImage {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  row-gap: 10px;
+}
+
+.inputText1 {
+  width: 30%;
+  height: 30px;
+}
+
+.inputText2 {
+  width: 90%;
+  height: 100px;
+}
+
+.specifits {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Popupname {
+  display: flex;
+  justify-content: center;
+}
+
+.sumary {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+.commentPOPup {
+  width: 100px;
+  height: 50px;
+}
+
+.DivcommentPOPup {
+  display: flex;
+}
+
+.PopupImage {
+  min-width: 100%;
+  height: 600px;
+}
+
+.fa-timesBtn {
+  border: none;
+  background: none;
+}
+
+.timesDiv {
+  display: flex;
+  justify-content: end;
+}
+
+.fa-times {
+  font-size: x-large;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
