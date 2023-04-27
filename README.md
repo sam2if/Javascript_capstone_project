@@ -96,12 +96,12 @@ To run tests, run the following command:
 - Twitter: [samuel_lemma](https://twitter.com/samuellemma3733)
 - LinkedIn: [samuel_lemma](https://www.linkedin.com/in/samuel-lemma-7479b1214/)
 
-👤 **Donald Akite**
 
-- GitHub: [@githubhandle](https://github.com/quavo19)
-- Twitter: [@twitterhandle](https://twitter.com/DonaldAkite)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/donald-akite-299a31222/)
+👤 **Massa zoumanigui**
 
+- GitHub: [@massazoum](https://github.com/massazoum)
+- Twitter: [@zoumaniguimass1](https://twitter.com/zoumaniguimass1)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/zoumtechmassa/)
 
 ## 🔭 Future Features <a name="future-features"></a>
 
