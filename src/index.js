@@ -1,4 +1,4 @@
-import _, { get } from 'lodash';
+// import _, { get } from 'lodash';
 import './style.css';
 import { commentPopup, Getcomment } from './Modules/Popup.js';
 import { allLikes } from './module/forlikes';
@@ -73,16 +73,16 @@ const GetShows = async () => {
       // listsMovie.appendChild(Position);
       listsMovie.appendChild(Movie);
     }commentPopup();
-  
+
     const ShowPopup = () => {
       const Btncomment1 = document.querySelectorAll('.Btncomment');
       const arrBtncomment = Array.from(Btncomment1);
       arrBtncomment.forEach((element) => {
-        element.addEventListener('click', () => {      
+        element.addEventListener('click', () => {
           const pop = element.parentElement.parentElement.querySelector('.Position');
           pop.style.display = 'flex';
           const op = element.parentElement.parentElement.querySelector('.Position').querySelector('.FramePopup').querySelector('.placeComment');
-          
+
           Getcomment(op);
         });
       });
@@ -94,10 +94,10 @@ const GetShows = async () => {
       arrBntcloss.forEach((element) => {
         element.addEventListener('click', () => {
           window.location.reload();
-element.parentElement.parentElement.parentElement.querySelector('.FramePopup').style.display = 'none';
+          element.parentElement.parentElement.parentElement.querySelector('.FramePopup').style.display = 'none';
           element.style.display = 'none';
-           Bntcloss = document.querySelectorAll('.fa-timesBtn');
-           arrBntcloss = Array.from(Bntcloss);
+          Bntcloss = document.querySelectorAll('.fa-timesBtn');
+          arrBntcloss = Array.from(Bntcloss);
         });
       });
     };

@@ -1,15 +1,11 @@
-
-export const commentPopup =async () => {
- const IdApp = 'znEt8NLbG52uig66lI2e';
- const Btncomment1 = document.querySelectorAll('.commentPOPup');
+export const commentPopup = async () => {
+  const IdApp = 'znEt8NLbG52uig66lI2e';
+  const Btncomment1 = document.querySelectorAll('.commentPOPup');
   const arrcommentPOPup = Array.from(Btncomment1);
   arrcommentPOPup.forEach((element) => {
     element.addEventListener('click', () => {
       const placeComment = element.parentElement.parentElement.parentElement.querySelector('.placeComment');
-      console.log(placeComment);
-
-      console.log(element.parentElement.parentElement.parentElement.querySelector('.placeComment'));
-
+      
       const Inp1 = element.parentElement.parentElement.querySelector('.inputText1').value;
       const Inp2 = element.parentElement.parentElement.querySelector('.inputText2').value;
       const name = element.parentElement.parentElement.parentElement.querySelector('.Popupname').innerHTML;
@@ -22,7 +18,6 @@ export const commentPopup =async () => {
       };
 
       const objectCommet = JSON.stringify(commenT);
-      console.log(objectCommet);
 
       const PostApp = async () => {
         try {
