@@ -85,7 +85,7 @@ const GetShows = async () => {
 
        </div>
      </div>
-  
+     
    </div>
 
    <div class="DivBtncomment"><button>comments</button></div>   
@@ -135,6 +135,7 @@ const GetShows = async () => {
 };
 
 GetShows();
+
 for (let i = 0; i <= 15; i += 1) {
   const displayLikes = async () => {
     const res = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/32UoQxjPo3aTpkPwZxqF/likes/');
