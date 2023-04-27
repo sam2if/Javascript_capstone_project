@@ -1,1 +1,0 @@
-# Javascript_capstone_project
