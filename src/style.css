@@ -102,7 +102,6 @@ li a:hover {
   overflow: scroll;
   left: 0;
   right: 0;
-  font-family: 'poppins', sans-serif;
 }
 
 .footer {
@@ -117,7 +116,6 @@ li a:hover {
 }
 
 .FramePopup {
-  /* background-color: rgb(30, 96, 138); */
   background: hsl(0, 100%, 50%);
   background: linear-gradient(359deg, hsl(0, 100%, 50%) 0%, #00ffe7 20%);
   background: -webkit-linear-gradient(359deg, hsl(0, 100%, 50%) 0%, #00ffe7 20%);
