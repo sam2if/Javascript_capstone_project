@@ -1,14 +1,13 @@
-import { commentPopup ,Getcomment } from './Popup';
+import { commentPopup, Getcomment } from './Popup';
 
 global.document = {
- querySelectorAll: jest.fn(() => []),
+  querySelectorAll: jest.fn(() => []),
 };
 
 test('commentPopup function is defined', () => {
- expect(commentPopup).toBeDefined();
-})
-
-test('commentPopup function is defined', () => {
- expect(Getcomment).toBeDefined();
+  expect(commentPopup).toBeDefined();
 });
 
+test('commentPopup function is defined', () => {
+  expect(Getcomment).toBeDefined();
+});
