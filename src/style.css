@@ -1,5 +1,5 @@
 body {
-  background: rgb(85, 109, 48);
+  
 }
 
 header {
@@ -53,11 +53,6 @@ li a:hover {
   margin-top: 30px;
   margin-left: 6em;
 
-  grid-template-columns: repeat(5, 1fr);
-  gap: 3em;
-  width: 250px;
-  margin-top: 30px;
-  margin-left: 20px;
 
   padding: 1em;
 }
