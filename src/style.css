@@ -70,27 +70,32 @@ li a:hover {
   margin-top: 20px;
 }
 
-.Btncomment {
-
-}
-
 .Position {
   position: absolute;
   display: none;
-  top: 50px;
+  top: 0;
   justify-content: center;
   width: 110vw;
-  background-color: rgba(92, 100, 97, 0.952);
+  background-color: rgba(10, 119, 138, 0.74);
+  overflow: scroll;
   left: 0;
   right: 0;
+  font-family: 'poppins', sans-serif;
 }
 
 .FramePopup {
-  background-color: rgb(30, 96, 138);
+  /* background-color: rgb(30, 96, 138); */
+  background: hsl(0, 100%, 50%);
+  background: linear-gradient(359deg, hsl(0, 100%, 50%) 0%, #00ffe7 20%);
+  background: -webkit-linear-gradient(359deg, hsl(0, 100%, 50%) 0%, #00ffe7 20%);
+  background: -moz-linear-gradient(359deg, hsl(0, 100%, 50%) 0%, #00ffe7 20%);
   padding: 50px;
   width: 50vw;
-  border-radius: 20px;
+  border-radius: 30px;
   margin-bottom: 400px;
+  box-shadow: 10px 10px 5px 0 #000000bf;
+  -webkit-box-shadow: 10px 10px 5px 0 #000000bf;
+  -moz-box-shadow: 10px 10px 5px 0 #000000bf;
 }
 
 .popupImage {
@@ -109,11 +114,13 @@ li a:hover {
 .inputText1 {
   width: 30%;
   height: 30px;
+  border-radius: 15px;
 }
 
 .inputText2 {
   width: 90%;
   height: 100px;
+  border-radius: 15px;
 }
 
 .specifits {
@@ -132,10 +139,12 @@ li a:hover {
   padding: 20px;
 }
 
-
 .commentPOPup {
   width: 100px;
   height: 50px;
+  border-radius: 15px;
+  background-color: darkslateblue;
+  color: aliceblue;
 }
 
 .DivcommentPOPup {
@@ -163,3 +172,7 @@ li a:hover {
   cursor: pointer;
 }
 
+.gg {
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
