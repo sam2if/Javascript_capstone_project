@@ -78,6 +78,8 @@ const GetShows = async () => {
       const arrBtncomment = Array.from(Btncomment1);
       arrBtncomment.forEach((element) => {
         element.addEventListener('click', () => {
+
+          
           const pop = element.parentElement.parentElement.querySelector('.Position');
           pop.style.display = 'flex';
           const op = element.parentElement.parentElement.querySelector('.Position').querySelector('.FramePopup').querySelector('.placeComment');
