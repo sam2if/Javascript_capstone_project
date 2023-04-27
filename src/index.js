@@ -1,5 +1,5 @@
 import './style.css';
-
+import _ from 'lodash';
 import { allLikes } from './module/forlikes.js';
 
 const GetShows = async () => {
