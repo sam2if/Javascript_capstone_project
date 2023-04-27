@@ -39,7 +39,6 @@ const GetShows = async () => {
            <div>Ended :${shows.ended
 
 }</div>
-
          </div>
        </div>
        <h2>summary</h2>
