@@ -2,6 +2,40 @@ import './style.css';
 import _ from 'lodash';
 import { allLikes } from './module/forlikes.js';
 
+
+
+
+// const GetShows=async ()=>{
+//  try {
+//   const res = await fetch(url);
+//   const shows = await res.json();
+//   console.log(shows)
+
+//  }catch(error) {
+//   console.log("error", error);
+//  }
+// }
+// GetShows()
+
+let count = 0;
+
+
+const GetShows=async ()=>{
+ try {
+  
+  const listsMovie = document.querySelector('.listsMovie');
+  for(let i=1 ;i <=15 ;i++){
+   const url = `https://api.tvmaze.com/shows/${i}`
+   const res = await fetch(url);
+   const shows = await res.json();
+
+
+   console.log(res)
+
+   const Movie = document.createElement('div');
+   Movie.className='Movie'
+   Movie.innerHTML =`
+
 const GetShows = async () => {
   try {
     const listsMovie = document.querySelector('.listsMovie');
@@ -14,12 +48,18 @@ const GetShows = async () => {
       const Movie = document.createElement('div');
       Movie.className = 'Movie';
       Movie.innerHTML = `
+
    <img src="${shows.image.medium}"
    <div class="ItemLike">
      <div>${shows.name}  ${i}</div>
      <div class="likeDiv">
+
+       <button class="reacttoit"> <i class='fa fa-heart-o green-color'></i></button>
+       <div class="dis">likes
+
        <button class="reacttoit${i}"> <i class='fa fa-heart-o green-color'></i></button>
        <div class="dis${i}">likes
+
        </div>
      </div>
      
@@ -32,7 +72,28 @@ const GetShows = async () => {
   } catch (error) {
     console.log('error', error);
   }
+
+
+  const likes = document.querySelectorAll('.reacttoit');
+  likes.forEach((elem) => {
+    elem.addEventListener('click', nuoflikes)
+  })
+
+  function nuoflikes() {
+    count += 1;
+    const ll = document.createElement('div')
+    const dis = document.querySelector('.dis');
+    dis.innerHTML =  `<h1>likes ${count}</h1>`
+    console.log('yes');
+  }
+  
+ }catch(error) {
+  console.log("error", error);
+ }
+}
+
 };
+
 
 GetShows();
 
