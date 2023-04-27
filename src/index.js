@@ -10,7 +10,8 @@ const GetShows = async () => {
       const url = `https://api.tvmaze.com/shows/${i}`;
       const res = await fetch(url);
       const shows = await res.json();
-
+      const allmovies = document.querySelector('.allmovies');
+      allmovies.innerHTML = `Movies[${shows.id}]`;
       const Movie = document.createElement('div');
       const Position = document.createElement('div');
       Position.className = 'Position';
