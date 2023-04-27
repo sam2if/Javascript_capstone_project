@@ -57,11 +57,10 @@ const GetShows = async () => {
       Movie.innerHTML = `
    <img src="${shows.image.medium}">
    <div class="ItemLike">
-     <div class="showName">${shows.name}  ${i}</div>
+     <div class="showName"><p>${shows.name}  ${i}</p></div>
      <div class="likeDiv">
-       <button class="reacttoit${i}"> <i class='fa fa-heart-o green-color'></i></button>
+       <i id="reacttoit${i}"class='fa fa-heart-o green-color'></i>
        <div class="dis${i}">
-         3 Likes
        </div>
      </div>
   
@@ -92,7 +91,6 @@ const GetShows = async () => {
       let arrBntcloss = Array.from(Bntcloss);
       arrBntcloss.forEach((element) => {
         element.addEventListener('click', () => {
-          window.location.reload();
           element.parentElement.parentElement.parentElement.querySelector('.FramePopup').style.display = 'none';
           element.style.display = 'none';
           Bntcloss = document.querySelectorAll('.fa-timesBtn');
@@ -114,8 +112,9 @@ for (let i = 0; i <= 15; i += 1) {
     const data = await res.json();
     const dis = document.querySelector(`.dis${i}`);
     dis.innerHTML = `<p>likes ${data[i].likes} </p>`;
-    const lik = document.querySelector(`.reacttoit${i}`);
+    const lik = document.querySelector(`#reacttoit${i}`);
     lik.addEventListener('click', () => {
+      lik.style.color = 'black'
       data[i].likes += 1;
       allLikes(i + 1);
       dis.innerHTML = `<p>likes ${data[i].likes} </p>`;
