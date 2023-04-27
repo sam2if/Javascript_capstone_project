@@ -77,9 +77,7 @@ const GetShows = async () => {
       const Btncomment1 = document.querySelectorAll('.Btncomment');
       const arrBtncomment = Array.from(Btncomment1);
       arrBtncomment.forEach((element) => {
-        element.addEventListener('click', () => {
-
-          
+        element.addEventListener('click', () => {      
           const pop = element.parentElement.parentElement.querySelector('.Position');
           pop.style.display = 'flex';
           const op = element.parentElement.parentElement.querySelector('.Position').querySelector('.FramePopup').querySelector('.placeComment');
@@ -94,7 +92,8 @@ const GetShows = async () => {
       let arrBntcloss = Array.from(Bntcloss);
       arrBntcloss.forEach((element) => {
         element.addEventListener('click', () => {
-          element.parentElement.parentElement.parentElement.querySelector('.FramePopup').style.display = 'none';
+          window.location.reload();
+element.parentElement.parentElement.parentElement.querySelector('.FramePopup').style.display = 'none';
           element.style.display = 'none';
            Bntcloss = document.querySelectorAll('.fa-timesBtn');
            arrBntcloss = Array.from(Bntcloss);
